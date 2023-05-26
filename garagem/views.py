@@ -30,7 +30,6 @@ class MarcaViewSet(ModelViewSet):
     queryset = Marca.objects.all()
     serializer_class = MarcaSerializer
 
-
 class VeiculoViewSet(ModelViewSet):
     queryset = Veiculo.objects.all()
 
