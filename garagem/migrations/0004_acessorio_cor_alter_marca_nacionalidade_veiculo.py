@@ -5,40 +5,88 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('garagem', '0003_marca_nacionalidade_alter_marca_nome'),
+        ("garagem", "0003_marca_nacionalidade_alter_marca_nome"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Acessorio',
+            name="Acessorio",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('descricao', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("descricao", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='Cor',
+            name="Cor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('descricao', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("descricao", models.CharField(max_length=100)),
             ],
         ),
         migrations.AlterField(
-            model_name='marca',
-            name='nacionalidade',
+            model_name="marca",
+            name="nacionalidade",
             field=models.CharField(blank=True, max_length=50, null=True),
         ),
         migrations.CreateModel(
-            name='Veiculo',
+            name="Veiculo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('ano', models.DateField(max_length=4)),
-                ('preco', models.DecimalField(blank=True, decimal_places=2, default=0, max_digits=10, null=True)),
-                ('categoria', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='garagem.categoria')),
-                ('cor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='garagem.cor')),
-                ('marca', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='garagem.marca')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("ano", models.DateField(max_length=4)),
+                (
+                    "preco",
+                    models.DecimalField(
+                        blank=True,
+                        decimal_places=2,
+                        default=0,
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "categoria",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="garagem.categoria",
+                    ),
+                ),
+                (
+                    "cor",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="garagem.cor"
+                    ),
+                ),
+                (
+                    "marca",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="garagem.marca"
+                    ),
+                ),
             ],
         ),
     ]

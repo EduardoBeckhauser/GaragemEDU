@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('garagem', '0004_acessorio_cor_alter_marca_nacionalidade_veiculo'),
+        ("garagem", "0004_acessorio_cor_alter_marca_nacionalidade_veiculo"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='veiculo',
-            name='ano',
+            model_name="veiculo",
+            name="ano",
             field=models.IntegerField(blank=True, default=0, null=True),
         ),
     ]
