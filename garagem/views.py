@@ -26,6 +26,10 @@ class CorViewSet(ModelViewSet):
     queryset = Cor.objects.all()
     serializer_class = CorSerializer        
 
+class MarcaViewSet(ModelViewSet):
+    queryset = Marca.objects.all()
+    serializer_class = MarcaSerializer
+
         
               
 
