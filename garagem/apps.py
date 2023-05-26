@@ -1,8 +1,7 @@
 from django.apps import AppConfig
 
 
-class Acessorio(models.Model):
-    descricao = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.descricao.title()    
+class GaragemConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'GaragemEDU'
+    
