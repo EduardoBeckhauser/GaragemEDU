@@ -20,12 +20,25 @@ name = ""
 version = ""
 description = ""
 authors = [
-    {name = "EduardoBeckhauser", email = "eduardololamorim235@gmail.com"},
+     {name = "EduardoBeckhauser", email = "eduardololamorim235@gmail.com"},
 ]
 dependencies = [
     "django>=4.2.4",
     "djangorestframework>=3.14.0",
     "django-cors-headers>=4.2.0",
+    "djangorestframework-simplejwt>=5.2.2",
+    "setuptools>=68.1.2",
+    "python-magic>=0.4.27",
+    "Pillow>=10.0.0",
+    "drf-spectacular>=0.26.4",
+    "django-extensions>=3.2.3",
+    "pydotplus>=2.0.2",
 ]
 requires-python = ">=3.10"
 license = {text = "MIT"}
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
+
+
